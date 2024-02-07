@@ -7,21 +7,13 @@ import { Link } from "react-router-dom";
 import { SiAddthis } from "react-icons/si";
 
 const NavBar = () => {
-  const { tokenUpdate, isAdmin } = useContext(TokenContext);
+  const { isAdmin } = useContext(TokenContext);
 
-  const handleExitButton = () => {
-    tokenUpdate("");
-  };
 
-  const navContainerStyle = {
-    display: "flex",
-    justifyContent: "space-around",
-    gap: "20px",
-  };
 
   return (
     <>
-      <span>
+      <span className="navContainer">
         {" "}
         <ProfileIcon />
         <ModalButton />
